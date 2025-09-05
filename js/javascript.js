@@ -1,7 +1,18 @@
-console.log("Test");
+function askPlayer() {
+  let answer = prompt("Do you want to continue? (yes/no) You'll need your console open.");
+
+if (answer && answer.toLowerCase() === "yes") {
+    console.log("Let's play!");
+    playGame();
+} else {
+    console.log("Okay! If you wish to play you can type 'playGame()' in the console!");
+}
+}
 
 var humanScore = 0;
 var computerScore = 0;
+
+askPlayer();
 
 function playGame () {
 
@@ -92,5 +103,4 @@ function playGame () {
   const computerSelection = getComputerChoice();
   
   playRound(humanSelection, computerSelection);
-
 }
